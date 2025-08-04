@@ -343,6 +343,15 @@ cortex:
       - mountPath: "/etc/cortex-runtime-cfg"
         name: "cortex-runtime-config"
   memcached-blocks-index:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/memcached
+      tag: 1.6.19-debian-11-r0
+    metrics:
+        image:
+          registry: docker.io
+          repository: bitnamilegacy/memcached-exporter
+          tag: 0.11.2-debian-11-r0
     enabled: true
     podAnnotations:
       cluster-autoscaler.kubernetes.io/safe-to-evict-local-volumes: tmp
@@ -351,6 +360,15 @@ cortex:
       requests:
         cpu: 5m
   memcached-blocks:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/memcached
+      tag: 1.6.19-debian-11-r0
+    metrics:
+        image:
+          registry: docker.io
+          repository: bitnamilegacy/memcached-exporter
+          tag: 0.11.2-debian-11-r0
     enabled: true
     podAnnotations:
       cluster-autoscaler.kubernetes.io/safe-to-evict-local-volumes: tmp
@@ -359,6 +377,15 @@ cortex:
       requests:
         cpu: 5m
   memcached-blocks-metadata:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/memcached
+      tag: 1.6.19-debian-11-r0
+    metrics:
+        image:
+          registry: docker.io
+          repository: bitnamilegacy/memcached-exporter
+          tag: 0.11.2-debian-11-r0
     enabled: true
     podAnnotations:
       cluster-autoscaler.kubernetes.io/safe-to-evict-local-volumes: tmp
