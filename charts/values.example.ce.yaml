@@ -135,3 +135,10 @@ telemetry:
   # This field is required and will print an error message when that entry is missing.
   # You can generate uuid using command `uuidgen` on your linux machine
   uuid: ""
+
+velero:
+  kubectl:
+    image:
+      # Overwrite the default kubectl image repository with the legacy one, till velero updates their default image.
+      repository: docker.io/bitnamilegacy/kubectl
+      tag: 1.33

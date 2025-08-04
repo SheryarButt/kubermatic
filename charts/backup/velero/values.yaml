@@ -101,4 +101,9 @@ velero:
   # Only kube2iam: change the AWS_ACCOUNT_ID and HEPTIO_VELERO_ROLE_NAME
   annotations: {}
   # iam.amazonaws.com/role: arn:aws:iam::<AWS_ACCOUNT_ID>:role/<HEPTIO_VELERO_ROLE_NAME>
-
+  
+  kubectl:
+    image:
+      # Overwrite the default kubectl image repository with the legacy one, till velero updates their default image.
+      repository: docker.io/bitnamilegacy/kubectl
+      tag: 1.33
